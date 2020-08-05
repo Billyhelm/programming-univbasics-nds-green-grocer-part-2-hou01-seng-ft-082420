@@ -7,12 +7,11 @@ def apply_coupons(cart, coupons)
       if item_lookup[:item] === coupon[:item]
         item_lookup[:count] -= coupon[:num]
         item_price = coupon[:cost] / coupon[:num]
-        new_coupon.push({item: "#{coupon[:item]} W/COUPON", price: item_price, clearance: item_lookup[:clearance], count: coupon[:num]})
+        cart.push({item: "#{coupon[:item]} W/COUPON", price: item_price, clearance: item_lookup[:clearance], count: coupon[:num]})
       end #if 
     end #cart.map 
   end #coupons.map
-  cart = cart + new_coupon
-  p new_coupon
+  p cart 
 end #method
 
 cart = [
