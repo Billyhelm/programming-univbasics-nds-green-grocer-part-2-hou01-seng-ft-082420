@@ -22,13 +22,16 @@ coupons = [
   {:item => "AVOCADO", :num => 2, :cost => 5.00}
 ]
 
-apply_coupons(cart, coupons)
-
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+  cart.map do |items|
+    if items[:clearance]
+      items[:price] *= .8
+    end #if items
+  end #cart.map 
+  p cart 
 end
+
+apply_clearance(cart)
 
 def checkout(cart, coupons)
   # Consult README for inputs and outputs
