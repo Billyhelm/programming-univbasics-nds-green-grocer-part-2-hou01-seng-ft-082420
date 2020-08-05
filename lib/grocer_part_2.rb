@@ -25,7 +25,7 @@ coupons = [
 def apply_clearance(cart)
   cart.map do |items|
     if items[:clearance]
-      items[:price] *= .8
+      items[:price] *= 0.8
     end #if items
   end #cart.map 
   p cart 
