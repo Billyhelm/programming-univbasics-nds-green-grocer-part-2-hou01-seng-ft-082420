@@ -1,16 +1,18 @@
 require_relative './part_1_solution.rb'
 
 def apply_coupons(cart, coupons)
-  coupons.each do |coupon|
+  new_coupon = []
+  coupons.map do |coupon|
     cart.map do |item_lookup|
       if item_lookup[:item] === coupon[:item]
         item_lookup[:count] -= coupon[:num]
-      end 
-    end 
-  end 
-    p cart
-  
-end
+        item_price = coupon[:cost] / coupon[:num]
+        new_coupon.push({item: "#{coupon[:item]} W/COUPON", price: item_price, clearance: item_lookup[:clearance], count: coupon[:num]})
+      end #if 
+    end #cart.map 
+  end #coupons.map
+  p new_coupon
+end #method
 
 cart = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 3},
