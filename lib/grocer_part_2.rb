@@ -1,11 +1,13 @@
 require_relative './part_1_solution.rb'
 
 def apply_coupons(cart, coupons)
+  coupon_number = 0
     cart.map do |item_lookup|
-      if item_lookup[:item] === coupons[:item]
-        item_lookup[:count] -= coupons[:num]
+      if item_lookup[:item] === coupons[coupon_number][:item]
+        item_lookup[:count] -= coupons[coupon_number][:num]
       end 
     end 
+    coupon_number += 1
     p cart
   
 end
