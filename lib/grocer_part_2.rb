@@ -11,6 +11,7 @@ def apply_coupons(cart, coupons)
       end #if 
     end #cart.map 
   end #coupons.map
+  p cart
   p new_coupon
 end #method
 
