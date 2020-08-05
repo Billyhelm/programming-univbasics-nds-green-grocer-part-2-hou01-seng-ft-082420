@@ -4,8 +4,9 @@ def apply_coupons(cart, coupons)
     cart.map do |item_lookup|
       if item_lookup[:item] === coupons[:item]
         item_lookup[:count] -= coupons[:num]
-      end  
-    p cart  
+      end 
+    end 
+    p cart
   
 end
 
