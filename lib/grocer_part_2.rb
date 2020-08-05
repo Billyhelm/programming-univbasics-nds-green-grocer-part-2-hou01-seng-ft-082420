@@ -34,4 +34,3 @@ def checkout(cart, coupons)
   total
 end
 
-checkout(cart, coupons)
