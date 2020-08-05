@@ -9,6 +9,11 @@ def apply_coupons(cart, coupons)
   
 end
 
+cart = [
+  {:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 3},
+  {:item => "KALE",    :price => 3.00, :clearance => false, :count => 1}
+]
+coupons = 
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
